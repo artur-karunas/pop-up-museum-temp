@@ -913,7 +913,14 @@ Returns statuses of appeal entity.
 ```
 
 ### 🌍 POST /appeal
-Creates a new appeal.
+Creates a new appeal. Provide JWT if user creates an appeal, otherwise the request will be created in public form (from an unauthorized user).
+
+**Request header**
+```
+{
+	"Authorization": JWT (if needed)
+}
+```
 
 **Request body**
 ```
@@ -1014,7 +1021,14 @@ Returns statuses of reservation entity.
 ```
 
 ### 🌍 POST /reservation
-Creates a new reservation.
+Creates a new reservation. Provide JWT if user creates an appeal, otherwise the request will be created in public form (from an unauthorized user).
+
+**Request header**
+```
+{
+	"Authorization": JWT (if needed)
+}
+```
 
 **Request body**
 ```
